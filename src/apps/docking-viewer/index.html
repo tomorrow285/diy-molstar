@@ -27,10 +27,20 @@
             }
             var pdbqt = getParam('pdbqt', '[^&]+').trim();
             var mol2 = getParam('mol2', '[^&]+').trim();
+            // pdbqt = 'http://127.0.0.1:8080/files/HIF2a.pdbqt'
+            // mol2 = 'http://127.0.0.1:8080/files/actives_part.mol2'
+            // viewer.loadStructuresFromUrlsAndMerge([
+            //     { url: pdbqt, format: 'pdbqt' },
+            //     { url: mol2, format: 'mol2' }
+            // ]);
+
+
+            pdbqt = 'http://127.0.0.1:8080/files/protein.pdb'
+            mol2 = 'http://127.0.0.1:8080/files/dp_3b.sdf'
 
             viewer.loadStructuresFromUrlsAndMerge([
-                { url: pdbqt, format: 'pdbqt' },
-                { url: mol2, format: 'mol2' }
+                { url: pdbqt, format: 'pdb' },
+                { url: mol2, format: 'sdf' }
             ]);
         </script>
     </body>
